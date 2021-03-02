@@ -16,8 +16,8 @@
     "lint": "tsdx lint src",
     "prepublish": "npm run build"
   },
-  "main": "dist/index.js",
-  "module": "dist/react.esm.js",
+  "main": "dist/trpc-react.cjs.js",
+  "module": "dist/trpc-react.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "README.md",

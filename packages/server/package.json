@@ -14,6 +14,13 @@
       "explicit-module-boundary-types": "off"
     }
   },
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "adapters/express.ts",
+      "adapters/next.ts"
+    ]
+  },
   "scripts": {
     "start": "yarn build --watch",
     "build": "tsc --project tsconfig.build.json",
@@ -21,8 +28,8 @@
     "lint": "tsdx lint",
     "prepublish": "npm run build"
   },
-  "main": "dist/index.js",
-  "module": "dist/utils.esm.js",
+  "main": "dist/trpc-server.cjs.js",
+  "module": "dist/trpc-server.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "README.md",

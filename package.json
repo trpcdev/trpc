@@ -21,7 +21,7 @@
   "scripts": {
     "lerna": "lerna",
     "start": "lerna run start --scope @trpc/* --stream --parallel",
-    "dev": "yarn start",
+    "dev": "preconstruct dev && preconstruct watch",
     "test": "lerna run test --scope @trpc/* --stream --",
     "lint": "lerna run lint --stream --",
     "lint-fix": "lerna run lint --stream -- --fix && manypkg fix",
@@ -44,6 +44,7 @@
     "@changesets/changelog-github": "^0.2.8",
     "@changesets/cli": "^2.13.1",
     "@manypkg/cli": "^0.17.0",
+    "@preconstruct/cli": "^2.0.5",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "cypress": "^6.3.0",
@@ -57,5 +58,10 @@
     "ts-jest": "^26.5.0",
     "tsdx": "^0.14.1",
     "typescript": "^4.1.4"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }
